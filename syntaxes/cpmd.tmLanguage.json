@@ -3,7 +3,8 @@
 	"name": "CPMD",
 	"patterns": [
 		{"include": "#comment"},
-		{"include": "#metadata"}
+		{"include": "#metadata"},
+		{"include": "#value"}
 	],
 	"repository": {
 		"comment": {
@@ -34,6 +35,43 @@
 					"match": "^ *#(?:VERSION)"
 				}
 			]
+		},
+		"value": {
+			"patterns": [
+				{
+					"include": "#string"
+				}
+			],
+			"repository": {
+				"string": {
+					"patterns": [
+						{
+							"name": "string.quoted.single",
+							"match": "'((?:\\\\.|[^'])*)'",
+							"captures": {
+								"1": {"patterns": [{"include": "#escape"}]}
+							}
+						},
+						{
+							"name": "string.quoted.double",
+							"match": "\"((?:\\\\.|[^\"])*)\"",
+							"captures": {
+								"1": {"patterns": [{"include": "#escape"}]}
+							}
+						}
+					],
+					"repository": {
+						"escape": {
+							"patterns": [
+								{
+									"name": "constant.character.escape",
+									"match": "\\\\."
+								}
+							]
+						}
+					}
+				}
+			}
 		}
 	},
 	"scopeName": "text.cpmd"
