@@ -3,29 +3,30 @@
 	"name": "CPMD",
 	"patterns": [
 		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
+			"include": "#comment"
 		}
 	],
 	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.cpmd",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.cpmd",
-			"begin": "\"",
-			"end": "\"",
+		"comment": {
 			"patterns": [
-				{
-					"name": "constant.character.escape.cpmd",
-					"match": "\\\\."
+				{"include": "#line"},
+				{"include": "#block"}
+			],
+			"repository": {
+				"line": {
+					"patterns": [
+						{
+							"name": "comment.line",
+							"match": "//.*"
+						}
+					]
+				},
+				"block": {
+					"name": "comment.block",
+					"begin": "/\\*(?:.*(?=\\*)|(?!\\*/).*$)",
+					"end": "\\*/"
 				}
-			]
+			}
 		}
 	},
 	"scopeName": "text.cpmd"
