@@ -2,9 +2,8 @@
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "CPMD",
 	"patterns": [
-		{
-			"include": "#comment"
-		}
+		{"include": "#comment"},
+		{"include": "#metadata"}
 	],
 	"repository": {
 		"comment": {
@@ -27,6 +26,14 @@
 					"end": "\\*/"
 				}
 			}
+		},
+		"metadata": {
+			"patterns": [
+				{
+					"name": "keyword.other",
+					"match": "^ *#(?:VERSION)"
+				}
+			]
 		}
 	},
 	"scopeName": "text.cpmd"
