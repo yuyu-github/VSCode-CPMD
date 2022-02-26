@@ -1,0 +1,25 @@
+{
+    "name": "cpmd-format",
+    "displayName": "CPMD Format",
+    "description": "",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.64.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "cpmd",
+            "aliases": ["CPMD", "cpmd"],
+            "extensions": [".cpmd"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "cpmd",
+            "scopeName": "text.cpmd",
+            "path": "./syntaxes/cpmd.tmLanguage.json"
+        }]
+    }
+}
