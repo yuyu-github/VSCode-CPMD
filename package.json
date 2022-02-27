@@ -2,7 +2,7 @@
   "name": "cpmd-format",
 	"displayName": "cpmd-format",
 	"description": "Perform syntax highlighting, input completion, etc. for CPMD.",
-	"version": "0.0.1",
+	"version": "1.0",
 	"publisher": "yuyu",
 	"engines": {
 		"vscode": "^1.64.0"
