@@ -35,6 +35,10 @@
 				{
 					"name": "keyword.other",
 					"match": "^ *#(?:Version|UseImport|UseFileImport|UseWebImport|TypeToImport|RequiredVar|Var)"
+				},
+				{
+					"name": "invalid.illegal",
+					"match": "^ *#.+"
 				}
 			]
 		},
