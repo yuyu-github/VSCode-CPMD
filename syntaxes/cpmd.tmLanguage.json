@@ -5,7 +5,8 @@
 		{"include": "#metadata"},
 		{"include": "#key"},
 		{"include": "#value"},
-		{"include": "#var"}
+		{"include": "#var"},
+		{"include": "#operator"}
 	],
 	"repository": {
 		"comment": {
@@ -41,7 +42,7 @@
 			"patterns": [
 				{
 					"name": "variable.other.constant",
-					"match": "(?<=^ *)(?:'((?:\\\\.|[^'])*)'|\"((?:\\\\.|[^\"])*)\"|([^<(\\[\\] ]\\S*))(?= +(?:\\w|[0-9.+\\-\"'<({\\[]))",
+					"match": "(?<=^ *)(?:'((?:\\\\.|[^'])*)'|\"((?:\\\\.|[^\"])*)\"|([^<(\\[\\] ]\\S*))(?= +(?:\\w|[0-9.+\\-!\"'<({\\[]))",
 					"captures": {
 						"1": {"patterns": [{"include": "#escape"}]},
 						"2": {"patterns": [{"include": "#escape"}]},
@@ -118,6 +119,14 @@
 				{
 					"name": "variable.other",
 					"match": "[a-zA-Z_]\\w*"
+				}
+			]
+		},
+		"operator": {
+			"patterns": [
+				{
+					"name": "keyword.operator",
+					"match": "[+\\-*/^!&|]|\\*\\*|&&|\\|\\||==|!=|<<|>>|<=|>="
 				}
 			]
 		}
