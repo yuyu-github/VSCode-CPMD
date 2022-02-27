@@ -34,7 +34,7 @@
 			"patterns": [
 				{
 					"name": "keyword.other",
-					"match": "^ *#(?:VERSION)"
+					"match": "^ *#(?:Version|UseImport|UseFileImport|UseWebImport|TypeToImport|RequiredVar|Var)"
 				}
 			]
 		},
