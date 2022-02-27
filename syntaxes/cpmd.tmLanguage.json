@@ -41,7 +41,7 @@
 		"key": {
 			"patterns": [
 				{
-					"name": "variable.other.constant",
+					"name": "variable.other",
 					"match": "(?<=^ *)(?:'((?:\\\\.|[^'])*)'|\"((?:\\\\.|[^\"])*)\"|([^<(\\[\\] ]\\S*))(?= +(?:\\w|[0-9.+\\-!\"'<({\\[]))",
 					"captures": {
 						"1": {"patterns": [{"include": "#escape"}]},
@@ -117,7 +117,7 @@
 		"var": {
 			"patterns": [
 				{
-					"name": "variable.other",
+					"name": "variable.other.constant",
 					"match": "[a-zA-Z_]\\w*"
 				},
 				{
