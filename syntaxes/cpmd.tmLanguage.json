@@ -5,7 +5,8 @@
 		{"include": "#comment"},
 		{"include": "#metadata"},
 		{"include": "#key"},
-		{"include": "#value"}
+		{"include": "#value"},
+		{"include": "#var"}
 	],
 	"repository": {
 		"comment": {
@@ -112,6 +113,14 @@
 					]
 				}
 			}
+		},
+		"var": {
+			"patterns": [
+				{
+					"name": "variable.parameter",
+					"match": "[a-zA-Z_]\\w*"
+				}
+			]
 		}
 	},
 	"scopeName": "text.cpmd"
