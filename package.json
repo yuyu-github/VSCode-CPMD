@@ -1,7 +1,7 @@
 {
   "name": "cpmd-format",
 	"displayName": "cpmd-format",
-	"description": "",
+	"description": "Perform syntax highlighting, input completion, etc. for CPMD.",
 	"version": "0.0.1",
 	"publisher": "yuyu",
 	"engines": {
