@@ -7,8 +7,7 @@
 		"vscode": "^1.64.0"
 	},
 	"categories": [
-		"Programming Languages",
-		"Other"
+		"Programming Languages"
 	],
 	"activationEvents": [
 		"*"
