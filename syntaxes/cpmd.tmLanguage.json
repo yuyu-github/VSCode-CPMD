@@ -38,7 +38,7 @@
 				},
 				{
 					"name": "invalid.illegal",
-					"match": "^ *#.+"
+					"match": "^ *#.*"
 				}
 			]
 		},
