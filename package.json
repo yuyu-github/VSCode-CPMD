@@ -20,6 +20,11 @@
             "language": "cpmd",
             "scopeName": "source.cpmd",
             "path": "./syntaxes/cpmd.tmLanguage.json"
+        }],
+        "snippets": [{
+            "language": "cpmd",
+            "scopeName": "source.cpmd",
+            "path": "./snippet/cpmd.snippet.json"
         }]
     }
 }
