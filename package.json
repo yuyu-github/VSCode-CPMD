@@ -18,7 +18,7 @@
         }],
         "grammars": [{
             "language": "cpmd",
-            "scopeName": "text.cpmd",
+            "scopeName": "source.cpmd",
             "path": "./syntaxes/cpmd.tmLanguage.json"
         }]
     }
