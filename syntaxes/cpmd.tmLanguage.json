@@ -1,6 +1,5 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "CPMD",
 	"patterns": [
 		{"include": "#comment"},
 		{"include": "#metadata"},
@@ -18,7 +17,7 @@
 				"line": {
 					"patterns": [
 						{
-							"name": "comment.line",
+							"name": "comment.line.double-slash",
 							"match": "//.*"
 						}
 					]
@@ -41,7 +40,7 @@
 		"key": {
 			"patterns": [
 				{
-					"name": "variable.other",
+					"name": "variable.other.constant",
 					"match": "(?<=^ *)(?:'((?:\\\\.|[^'])*)'|\"((?:\\\\.|[^\"])*)\"|([^<(\\[\\] ]\\S*))(?= +(?:\\w|[0-9.+\\-\"'<({\\[]))",
 					"captures": {
 						"1": {"patterns": [{"include": "#escape"}]},
@@ -117,7 +116,7 @@
 		"var": {
 			"patterns": [
 				{
-					"name": "variable.parameter",
+					"name": "variable.other",
 					"match": "[a-zA-Z_]\\w*"
 				}
 			]
