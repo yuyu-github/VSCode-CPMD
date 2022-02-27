@@ -3,6 +3,7 @@
 	"displayName": "cpmd-format",
 	"description": "",
 	"version": "0.0.1",
+	"publisher": "yuyu",
 	"engines": {
 		"vscode": "^1.64.0"
 	},
